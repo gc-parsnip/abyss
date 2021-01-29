@@ -13,7 +13,7 @@
  
  > * Builder:
  >   * The second design pattern was chosen because several aspects of the game are complex objects and it will help implement ways to build these complex objects without having to manually connect these objects together when we need them. (i.e. Creatures with items).  
- >   * There may be some problems when making the project like creating a system for generating levels with random objects that contain links to other objects and having many complex objects and those can be resolved by using this design pattern.
+ >   * There may be some problems when making the project like creating a system for generating floor levels with random objects that contain links to other objects. Problems like this can be resolved by using this design pattern.
  >   * The builder design pattern will allow these complex objects to be simplified by separating its construction from its representation.
  >   * It will be a good fix for that problem because builders can be reused to create the objects we need.
  
