@@ -3,16 +3,20 @@
 
 ## Project Description
  > This project is interesting because it is very open ended and there will be a lot of user interactions that need to be anticipated and intersecting code that will allow for a large amount of possibilities. There is room for creativity in the dialogue of this project.
- > This project will use mainly C++ and ...
+ > This project will use mainly C++.
  > The input of this project will be user text inputs and the output of this project will be machine and program text outputs.
  > The two design patterns that will be used in the project are:
  > * Composite:
- >   * The first design pattern was chosen because of class hierarchical structure and it will help implement things like the player characters, enemies, items, and room structure. 
+ >   * The first design pattern was chosen because of class hierarchical structure and it will help implement things like the player characters, enemies, items, and room structure. This allows objects and compositions to be treated pretty uniformly.
  >   * There may be some problems when making the project like combat and exploration and those can be resolved by using this design pattern. 
  >   * This design pattern will be a good fix for that problem because the base class interface would allow a single function call that could recursively find and summate things like items or status that would affect the players actions.
  
- > * Design #2
-
+ > * Builder:
+ >   * The second design pattern was chosen because several aspects of the game are complex objects and it will help implement ways to build these complex objects without having to manually connect these objects together when we need them. (i.e. Creatures with items).  
+ >   * There may be some problems when making the project like creating a system for generating levels with random objects that contain links to other objects and having many complex objects and those can be resolved by using this design pattern.
+ >   * The builder design pattern will allow these complex objects to be simplified by separating its construction from its representation.
+ >   * It will be a good fix for that problem because builders can be reused to create the objects we need.
+ 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
  > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
