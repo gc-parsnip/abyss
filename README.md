@@ -2,7 +2,7 @@
  > Authors: [James Liem](https://github.com/S-Kurisu), [James Zhang](https://github.com/MachineLearningAmateur), [Gavin Ceballos](https://github.com/gc-parsnip)
 
 ## Project Description
- > This project is interesting because it is very open ended and there will be a lot of user interactions that need to be anticipated and intersecting code that will allow for a large amount of possibilities. There is room for creativity in the dialogue of this project.
+ > This project will be an endless game. The player will descend from floor to floors, thus going deeper into the abyss. Each floor will contain mobs or possibly a puzzle. This is an interesting project because it is very open ended and there will be a lot of user interactions that need to be anticipated and adding code that will enable various forms of floors. There is also room for creativity in the dialogue of this game project.
  > This project will use mainly C++.
  > The input of this project will be user text inputs and the output of this project will be machine and program text outputs.
  > The two design patterns that will be used in the project are:
@@ -14,8 +14,8 @@
  > * Builder:
  >   * The second design pattern was chosen because several aspects of the game are complex objects and it will help implement ways to build these complex objects without having to manually connect these objects together when we need them. (i.e. Creatures with items).  
  >   * There may be some problems when making the project like creating a system for generating floor levels with random objects that contain links to other objects. Problems like this can be resolved by using this design pattern.
- >   * The builder design pattern will allow these complex objects to be simplified by separating its construction from its representation.
- >   * It will be a good fix for that problem because builders can be reused to create the objects we need.
+ >   * The builder design pattern will allow these complex objects to be used with ease by separating its construction from its representation.
+ >   * It will be a good fix for manually connecting objects together because builders can instead be reused to create the objects we need.
  
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
