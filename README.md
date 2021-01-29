@@ -2,7 +2,7 @@
  > Authors: [James Liem](https://github.com/S-Kurisu), [James Zhang](https://github.com/MachineLearningAmateur), [Gavin Ceballos](https://github.com/gc-parsnip)
 
 ## Project Description
- > This project will be an endless game. The player will descend from floor to floors, thus going deeper into the abyss. Each floor will contain mobs or possibly a puzzle. This is an interesting project because it is very open ended and there will be a lot of user interactions that need to be anticipated and adding code that will enable various forms of floors. There is also room for creativity in the dialogue of this game project.
+ > This project will be an endless game. The player will descend from floor to floors, thus going deeper into the abyss. Each floor will contain mobs or possibly a puzzle. This is an interesting project because it is very open ended and there will be a lot of user interactions that need to be anticipated and adding code that will enable various forms of floors. There is also room for creativity in the dialogue of this game project. A storyboard may also be considered.
  > This project will use mainly C++.
  > The input of this project will be user text inputs and the output of this project will be machine and program text outputs.
  > The two design patterns that will be used in the project are:
