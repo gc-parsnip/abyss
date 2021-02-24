@@ -69,3 +69,7 @@ void Player::loot() {
 int Player::get_score() {
     return floorCleared;
 }
+
+int Player::inspect_hp(Basic_Unit* target) {
+    return target->get_health();
+}

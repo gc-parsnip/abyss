@@ -21,6 +21,7 @@ class Player : public Basic_Unit {
         void increment_score();
         // void equip_weapon(Weapon* _weapon);
         void loot();
+        int inspect_hp(Basic_Unit* target);
         int get_score();
 };  
 
