@@ -1,14 +1,12 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
-
-SET(CMAKE_CXX_STANDARD 11)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8) 
 
 ADD_SUBDIRECTORY(googletest)
 
+SET(CMAKE_CXX_STANDARD 11)
+
 ADD_EXECUTABLE(test
-	tests/test.cpp
-	src/Player.cpp
-	src/attack_pot.cpp
-	src/health_pot.cpp
+	./src/mob_test.cpp
+    ./src/Mob.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
