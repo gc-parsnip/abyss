@@ -1,3 +1,6 @@
+#ifndef __BASIC_UNIT_HPP__
+#define __BASIC_UNIT_HPP__
+
 #include "Weapon.hpp"
 #include <string>
 #include <iostream>
@@ -6,22 +9,23 @@ class Basic_Unit {
     protected:
         std::string name;
         int health;
-        int attack;
+        int attackValue;
         bool guarded;
-        Weapon* weapon;
-        void guard;
+        // Weapon* weapon;
 
     public:
-        BasicUnit(int _health, int _attack) {
+        Basic_Unit(std::string _name, int _health, int _attack) {
+            name = _name;
             health = _health;
-            attack = _attack;
-            weapon = nullptr;
+            attackValue = _attack;
+            //weapon = nullptr;
         }
-        virtual void attack(BasicUnit* target) = 0;
+        virtual void attack(Basic_Unit* target) = 0;
         virtual void recover() = 0;
-        virtual void special(BasicUnit* target) = 0;
+        virtual void special(Basic_Unit* target) = 0;
         int get_health() {return health;}
-        int get_attack() {return attack;}
+        int get_attack() {return attackValue;}
+        void decrease_health(int damage) {health -= damage;}
         void guard(std::string on_or_off) {
             if (on_or_off == "on") {
                 guarded = true;
@@ -32,5 +36,6 @@ class Basic_Unit {
                 std::cout << name << "'s guard has worn off." << std::endl;
             }
         }
-
 };
+
+#endif

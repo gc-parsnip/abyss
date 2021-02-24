@@ -1,3 +1,6 @@
+#ifndef __PLAYER_HPP__
+#define __PLAYER_HPP__
+
 #include "Basic_Unit.hpp"
 #include <iostream>
 #include <string>
@@ -8,10 +11,15 @@ class Player : public Basic_Unit {
         int healthCap;
 
     public:     
-        Player(int _health, int _attack);
+        Player(std::string _name, int _health, int _attack);
+        void attack(Basic_Unit* target);
+        void recover();
+        void special(Basic_Unit* target);
         void increment_attack(int bonusAtt);
         void increment_health(int bonusHp);
         void increment_score();
-        void equip_weapon(Weapon* _weapon);
+        // void equip_weapon(Weapon* _weapon);
         void loot();
 };  
+
+#endif
