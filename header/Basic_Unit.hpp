@@ -1,7 +1,7 @@
 #ifndef __BASIC_UNIT_HPP__
 #define __BASIC_UNIT_HPP__
 
-#include "weapon.hpp"
+#include "Weapon.hpp"
 #include <string>
 #include <iostream>
 
