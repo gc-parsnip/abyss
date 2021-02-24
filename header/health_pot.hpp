@@ -2,7 +2,6 @@
 #define __HEALTH_POT_HPP__
 
 #include "loot.hpp"
-#include "BasicUnit.hpp"
 
 class health_pot : public Loot
 {
