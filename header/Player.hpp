@@ -12,6 +12,7 @@ class Player : public Basic_Unit {
 
     public:     
         Player(std::string _name, int _health, int _attack);
+        ~Player();
         void attack(Basic_Unit* target);
         void recover();
         void special(Basic_Unit* target);
@@ -20,6 +21,7 @@ class Player : public Basic_Unit {
         void increment_score();
         // void equip_weapon(Weapon* _weapon);
         void loot();
+        int get_score();
 };  
 
 #endif

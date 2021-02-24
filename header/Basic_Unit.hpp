@@ -20,11 +20,13 @@ class Basic_Unit {
             attackValue = _attack;
             //weapon = nullptr;
         }
+        virtual ~Basic_Unit() = default;
         virtual void attack(Basic_Unit* target) = 0;
         virtual void recover() = 0;
         virtual void special(Basic_Unit* target) = 0;
         int get_health() {return health;}
         int get_attack() {return attackValue;}
+        std::string get_name() {return name;}
         void decrease_health(int damage) {health -= damage;}
         void guard(std::string on_or_off) {
             if (on_or_off == "on") {
