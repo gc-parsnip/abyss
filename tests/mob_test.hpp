@@ -2,7 +2,7 @@
 #define __MOB_TEST_HPP__
 
 #include "gtest/gtest.h"
-#include "Mob.hpp"
+#include "../header/Mob.hpp"
 
 TEST(mob_test, test_attack)
 {

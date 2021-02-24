@@ -5,7 +5,7 @@
 #include <string>
 #include <iostream>
 
-class Mob : public basic_unit{
+class Mob : public Basic_Unit {
 	private:
 		std::string mobDescription;
 		int healthCap;

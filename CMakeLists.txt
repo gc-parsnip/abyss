@@ -5,8 +5,11 @@ ADD_SUBDIRECTORY(googletest)
 SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(test
-	./src/mob_test.cpp
-    ./src/Mob.cpp
+	tests/test.cpp
+    src/Mob.cpp
+    src/player.cpp
+    src/attack_pot.cpp
+    src/health_pot.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
