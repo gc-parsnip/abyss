@@ -1,4 +1,4 @@
-#include "../header/Player.hpp"
+#include "../header/player.hpp"
 #include "../header/player_test.hpp"
 
 int main(int argc, char **argv) {

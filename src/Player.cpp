@@ -1,4 +1,4 @@
-#include "../header/Player.hpp"
+#include "../header/player.hpp"
 
 
 Player::Player(std::string _name, int _health, int _attack) : Basic_Unit (_name, _health, _attack) {

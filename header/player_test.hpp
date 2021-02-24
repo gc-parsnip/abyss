@@ -2,7 +2,7 @@
 #define __PLAYER_TEST_HPP__
 
 #include "gtest/gtest.h"
-#include "Player.hpp"
+#include "player.hpp"
 
 TEST(player_test, test_get_health) {
     Player test = Player("Test", 100, 10);
