@@ -28,10 +28,9 @@ int main(){
 		else if(userInput == 3)
 		{
 			std::cout << "The program has been terminated." << std::endl;
+			system("pause");
 			std::cout << "Press any key to continue." << std::endl;
-			char a_char;
-			a_char = getchar();
-			std::cout << a_char;
+			
 			return 0;
 		}
 		else
