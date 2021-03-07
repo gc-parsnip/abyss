@@ -6,7 +6,7 @@
 
 int main(){
 	//floorbuilder fb = new floorbuilder();
-	int userInput;
+	std::string userInput;
 
 	while(true){
 		std::cout << "Welcome to the Abyss" << std::endl;
@@ -18,11 +18,12 @@ int main(){
 		std::cout << "------------------------" << std::endl;
 		std::cin >> userInput;
 
-		if(userInput == 1)
+		if(userInput == "1") //if user chooses 1
 		{
 			std::cout << "1 selected" << std::endl;
+			//create floorbuilder to start game
 		}
-		else if(userInput == 2)
+		else if(userInput == "2") //if user chooses 2
 		{
 			std::string text;
 			std::ifstream instructions;
@@ -38,7 +39,7 @@ int main(){
 			instructions.close();
 			std::cout << std::endl;
 		}
-		else if(userInput == 3)
+		else if(userInput == "3") //if user chooses 3
 		{
 			std::cout << "The program has been terminated." << std::endl;
 			std::cout << "Press any key to continue." << std::endl;
