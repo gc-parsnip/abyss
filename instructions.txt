@@ -1,0 +1,5 @@
+How to Play:
+This game is an endless dungeon crawler.
+The player can clear floors by defeating all the monsters on each floor.
+Moving onto the next floor will present more difficult enemies and challenges.
+The game ends when the player's health reaches zero.

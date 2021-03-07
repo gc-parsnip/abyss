@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <cstdio>
+#include <fstream>
 
 int main(){
 	//floorbuilder fb = new floorbuilder();
@@ -23,14 +24,25 @@ int main(){
 		}
 		else if(userInput == 2)
 		{
-			std::cout <<"2 selected" << std::endl;
+			std::string text;
+			std::ifstream instructions;
+			
+			instructions.open("instructions.txt");
+			if(!instructions){
+				std::cout << "Error opening file.";
+				exit(1);
+			}
+			while(getline(instructions, text)) {
+				std::cout << text << std::endl;
+			}
+			instructions.close();
+			std::cout << std::endl;
 		}
 		else if(userInput == 3)
 		{
 			std::cout << "The program has been terminated." << std::endl;
-			system("pause");
 			std::cout << "Press any key to continue." << std::endl;
-			
+			system("read"); //change to account for all scenarios
 			return 0;
 		}
 		else
