@@ -1,6 +1,6 @@
 #include "../header/basic_mob_builder.hpp"
 #include "../header/normal_weapon_builder.hpp"
-#include "../header/BasicUnit.hpp"
+#include "../header/basic_unit.hpp"
 #include "../header/Mob.hpp"
 #include "../header/loot.hpp"
 #include "../header/weapon.hpp"
@@ -14,7 +14,9 @@ basic_mob_builder::basic_mob_builder(){
 }
 
 std::vector<std::string> basic_mob_builder::DetermineName(int floorNumber){
-    int RandValue = rand() % (floorNumber) + 1;
+    int searchRange = floorNumber;
+    if(floorNumber > mobNames.size()) searchRange = mobNames.size();
+    int RandValue = rand() % (searchRange) + 1;
     std::vector<std::string> nameAndDescription;
     nameAndDescription.push_back(mobNames.find(RandValue)->second);
     nameAndDescription.push_back(mobDescriptions.find(RandValue)->second);

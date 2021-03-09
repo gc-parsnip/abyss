@@ -2,7 +2,7 @@
 #define __MOBBUILDERTEST_HPP__
 
 #include "gtest/gtest.h"
-#include "../header/BasicUnit.hpp"
+#include "../header/basic_unit.hpp"
 #include "../header/Mob.hpp"
 #include "../header/mob_builder.hpp"
 #include "../header/basic_mob_builder.hpp"
@@ -19,13 +19,13 @@ TEST(MobBuilderTest, mobMade) {
 TEST(MobBuilderTest, mobName) {
     basic_mob_builder mobBuilder;
     Mob* test = mobBuilder.GetMob(1);
-    EXPECT_EQ(test->get_name(), "Goblin");
+    EXPECT_EQ(test->get_name(), "Slime");
 }
 
 TEST(MobBuilderTest, mobDescription) {
     basic_mob_builder mobBuilder;
     Mob* test = mobBuilder.GetMob(1);
-    EXPECT_EQ(test->getMobDescription(), "Short and fast, but never particularly aware of its surroundings.");
+    EXPECT_EQ(test->getMobDescription(), "It's bouncing at you. Menacingly!");
 }
 
 TEST(WeaponBuilderTest, weaponMade) {
