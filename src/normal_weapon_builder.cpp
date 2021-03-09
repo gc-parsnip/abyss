@@ -10,7 +10,9 @@ int normal_weapon_builder::DetermineAttackValue(int floorNumber){
 }
 
 std::string normal_weapon_builder::DetermineDescription(int floorNumber){
-    int RandValue = rand() % floorNumber + 1;
+    int searchRange = floorNumber;
+    if(floorNumber > weaponDescriptions.size()) searchRange = weaponDescriptions.size();
+    int RandValue = rand() % searchRange + 1;
     return weaponDescriptions.find(RandValue)->second;
 }
 
