@@ -4,6 +4,7 @@
 #include "floor_builder.hpp"
 #include <fstream>
 
+
 //#include "mob_builder.hpp"
 
 class Normal_Floor_Builder : public Floor_Builder {
@@ -26,8 +27,8 @@ class Normal_Floor_Builder : public Floor_Builder {
             _floor = new Floor("normal");
             currentScene = scenery.at(index);
             _floor->setDescription(currentScene);
-            // std::cout << scenery.at(index) << std::endl;
-            // std::cout << scenery.at(1) << std::endl;
+            std::cout << scenery.at(index) << std::endl;
+            std::cout << scenery.at(1) << std::endl;
         }
 
         void resetFloor() {

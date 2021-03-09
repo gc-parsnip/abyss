@@ -8,7 +8,7 @@
 #include "../header/floors.hpp"
 
 TEST(floor_test, BuildNormalFloor) {
-    Normal_Floor_Builder* nf;
+    Normal_Floor_Builder* nf = new Normal_Floor_Builder;
     Director test(nf);
     Floor* floor = test.generateFloor(0);
     EXPECT_EQ(floor->displayFloorDescription(), "hello");

@@ -6,6 +6,7 @@
 #include "floors.hpp"
 #include <iostream>
 #include <string>
+#include <vector>
 
 class Floor_Builder {
     protected: 
