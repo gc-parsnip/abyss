@@ -7,7 +7,7 @@ Player::Player(std::string _name, int _health, int _attack) : Basic_Unit (_name,
 }
 
 Player::~Player() {
-
+    
 }
 
 void Player::attack(Basic_Unit* target) {

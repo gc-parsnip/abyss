@@ -10,6 +10,7 @@ class Normal_Floor_Builder : public Floor_Builder {
 
     public:
         Normal_Floor_Builder() {
+            scenery = {"hello", "okay", "test"};
             std::ifstream in;
             in.open("../GameText/FloorDescriptions.txt");
             if (in.is_open()) {
@@ -17,15 +18,16 @@ class Normal_Floor_Builder : public Floor_Builder {
                 while (std::getline(in, line, '~')) {
                     scenery.push_back(line);
                 }
-            } else {
-                scenery.push_back("hello");
-            }
+            } 
+            in.close();
         }
 
         Floor* generateFloor(int index) {
             _floor = new Floor("normal");
             currentScene = scenery.at(index);
-            _floor->setDescription("hello");
+            _floor->setDescription(currentScene);
+            // std::cout << scenery.at(index) << std::endl;
+            // std::cout << scenery.at(1) << std::endl;
         }
 
         void resetFloor() {
