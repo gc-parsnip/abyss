@@ -22,7 +22,7 @@ class Normal_Floor_Builder : public Floor_Builder {
             in.close();
         }
 
-        Floor* generateFloor(int index) {
+        Floor* createFloor(int index) {
             _floor = new Floor("normal");
             currentScene = scenery.at(index);
             _floor->setDescription(currentScene);

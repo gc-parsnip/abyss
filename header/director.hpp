@@ -21,7 +21,7 @@ class Director {
             builder = _builder;
         }
         Floor* generateFloor(int index) {
-            new_floor = builder->generateFloor(index);
+            new_floor = builder->createFloor(index);
             builder->spawnLoot();
             builder->spawnMobs();
             return new_floor;

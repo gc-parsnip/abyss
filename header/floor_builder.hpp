@@ -18,7 +18,7 @@ class Floor_Builder {
         virtual void resetFloor() = 0;
         virtual void spawnMobs() = 0;
         virtual void spawnLoot() = 0;
-        virtual Floor* generateFloor(int index) = 0;
+        virtual Floor* createFloor(int index) = 0;
         virtual void setScenery(int index) = 0;
 };
 
