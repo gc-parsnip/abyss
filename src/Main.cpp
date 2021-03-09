@@ -31,7 +31,7 @@ int main(){
 			instructions.open("instructions.txt");
 			if(!instructions){
 				std::cout << "Error opening file.";
-				exit(1);
+				exit(1); // return with error
 			}
 			while(getline(instructions, text)) {
 				std::cout << text << std::endl;
@@ -46,7 +46,7 @@ int main(){
 			system("read"); //change to account for all scenarios
 			return 0;
 		}
-		else
+		else //other
 		{
 			std::cout << "Invalid entry, please try again. " << std::endl;
 		}
