@@ -1,0 +1,24 @@
+Forest
+A vast forest expands out and reaches as far as the eye can see. 
+There is a small dirt trail that leads deep into the forest.
+It seems like this is the only path forward.
+~
+Sea
+A deep sea refracts light and illuminates the cavern. 
+The shine of the water gives off a relaxing feeling that contrasts the difficult battles that lie ahead.
+~
+Canyon
+Dry rocks and dust blow in the wind across gigantic cliff faces.
+It is a beautiful yet harsh landscape. 
+The way forward is uncertain.
+~
+Storm
+Wind and rain furiously beat down upon the land. 
+The storm shows no sign of subsiding. It seems to have been going on for a while.
+While the ferocity of the storm seems genuine, something about it's duration feels artifical.
+Is there a key to ending the storm hidden somewhere in the floor?
+~
+Desert
+Nothing but sand fills one's vision on this floor. The heat relentlessly beats down upon those who enter.
+Venturing through this floor will definitely take its toll on travelers.
+~
