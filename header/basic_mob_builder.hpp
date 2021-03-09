@@ -33,7 +33,7 @@ private:
 	{17, "Beholder"},
 	{18, "A Sharp Rock"},
 	{19, "Dragon"},
-	{20, "Large Tentacle"},
+	{20, "Large Tentacle"}
     };
     std::unordered_map<int, std::string> mobDescriptions = {
 	{1, "It's bouncing at you. Menacingly!"},
@@ -55,7 +55,7 @@ private:
 	{17, "Its a floating eyeball."},
 	{18, "You might have faced similar rocks before. This one is leagues more dangerous."},
 	{19, "Flying lizard goes brrrrr. Danger!"},
-	{20, "An appendage of some larger, scarier creature that has dug its way here."},
+	{20, "An appendage of some larger, scarier creature that has dug its way here."}
     };
     std::unordered_map<int, Loot*> weaponTable;
 protected:
