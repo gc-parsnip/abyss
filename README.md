@@ -47,7 +47,8 @@
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ >  ![1.png](https://github.com/cs100/final-project-jliem001-gceba003-jzhan326/blob/master/Images/1.png?raw=true)
+ >  ![2.png]
  ## Installation/Usage
  > * Open terminal. Run these commands on terminal. 
  >     1. git clone https://github.com/cs100/final-project-jliem001-gceba003-jzhan326.git
