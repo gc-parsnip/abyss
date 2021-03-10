@@ -11,14 +11,14 @@ class Basic_Unit {
         int health;
         int attackValue;
         bool guarded;
-        // Weapon* weapon;
+        weapon* currentWeapon;
 
     public:
         Basic_Unit(std::string _name, int _health, int _attack) {
             name = _name;
             health = _health;
             attackValue = _attack;
-            //weapon = nullptr;
+            currentWeapon = nullptr;
         }
         virtual ~Basic_Unit() = default;
         virtual void attack(Basic_Unit* target) = 0;
@@ -37,6 +37,9 @@ class Basic_Unit {
                 guarded = false;
                 std::cout << name << "'s guard has worn off." << std::endl;
             }
+        }
+        void set_weapon(weapon* newWeapon){
+	        currentWeapon = newWeapon;
         }
 };
 
