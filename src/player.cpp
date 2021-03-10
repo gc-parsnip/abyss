@@ -28,7 +28,7 @@ void Player::attack(Basic_Unit* target) {
 
 void Player::recover() {
     if (health < healthCap) {
-        health += 10;
+        health += healthCap-90;
         std::cout << name << " has recovered 10 health. " << std::to_string(health) << "/"
         << std::to_string(healthCap) << std::endl;
     } else {

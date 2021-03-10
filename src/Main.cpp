@@ -49,6 +49,7 @@ int main()
 			{
 				floor = dir.generateFloor(floorCounter%5, &player);
 				floorCounter += 1;
+				std::cout << "Floor: " << floorCounter << std::endl;
 				go = game(floor, &player);
 				std::cout << std::endl;
 				dir.destroyFloor();
@@ -107,6 +108,10 @@ bool game(Floor *floor, Player *player)
 		else
 		{
 			mob1->attack(player);
+			if (player->is_guarded()) {
+				player->guard("off");
+			}
+		
 		}
 	}
 	if (player->get_health() <= 0)

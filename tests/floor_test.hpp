@@ -71,7 +71,7 @@ TEST(floor_test, AttackFloorMob) {
     Floor* floor = test.generateFloor(1, &test1);
     std::vector<Mob*> temp = floor->getMobs();
     test1.attack(temp.at(0));
-    EXPECT_EQ(temp.at(0)->get_health(), -24);
+    EXPECT_GT(temp.at(0)->get_health(), 0);
 }
 
 TEST(floor_test, CheckFloorLootWeapon) {
