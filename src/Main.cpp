@@ -1,13 +1,16 @@
-//#include "floor_bulder.hpp"
+#include "../header/player.hpp"
+#include "../header/floors.hpp"
+#include "../header/director.hpp"
+#include "../header/normal_floor_builder.hpp"
 #include <string>
 #include <iostream>
 #include <cstdio>
 #include <fstream>
 
 int main(){
-	//floorbuilder fb = new floorbuilder();
+	
 	std::string userInput;
-
+	int floorCounter = 0;
 	while(true){
 		std::cout << "Welcome to the Abyss" << std::endl;
 		std::cout << "------------------------" << std::endl;
@@ -20,8 +23,18 @@ int main(){
 
 		if(userInput == "1") //if user chooses 1
 		{
-			std::cout << "1 selected" << std::endl;
-			//create floorbuilder to start game
+			std::cout << "Plase enter your name: " << std::endl;
+			std::cin >> userInput;
+			Player player =  Player(userInput, 100, 25);
+			std::cout << std::endl;
+			std::cout << "Hey, you. You're finally awake.\n We're at our destination.\n The Abyss invites you in..." << std::endl;
+			std::cout << std::endl;
+			Normal_Floor_Builder nf;
+			Director dir(&nf); 
+                        Floor* floor = dir.generateFloor(floorCounter%4, &player);
+			std::cout << floor->displayFloorDescription() << std::endl;
+			std::cout << std::endl;
+			floorCounter += 1;
 		}
 		else if(userInput == "2") //if user chooses 2
 		{
