@@ -11,15 +11,17 @@ class Normal_Floor_Builder : public Floor_Builder {
 
     public:
         Normal_Floor_Builder() {
-            scenery = {"hello", "okay", "test"};
             std::ifstream in;
             in.open("../GameText/FloorDescriptions.txt");
-            if (in.is_open()) {
-                std::string line;
+            std::string line
+            if (in.is_open()) {;
                 while (std::getline(in, line, '~')) {
                     scenery.push_back(line);
                 }
-            } 
+            } else {
+                std::cout << "Failed to open FloorDescriptions.txt" << std::endl;
+                scenery = {"hello"}
+            }
             in.close();
         }
 
@@ -27,8 +29,7 @@ class Normal_Floor_Builder : public Floor_Builder {
             _floor = new Floor("normal");
             currentScene = scenery.at(index);
             _floor->setDescription(currentScene);
-            std::cout << scenery.at(index) << std::endl;
-            std::cout << scenery.at(1) << std::endl;
+            return _floor;
         }
 
         void resetFloor() {
