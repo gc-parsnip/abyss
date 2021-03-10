@@ -25,16 +25,17 @@ std::vector<std::string> basic_mob_builder::DetermineName(int floorNumber){
 
 int basic_mob_builder::DetermineAttack(int floorNumber){
     int base = baseAttack;
-    if(floorNumber % bossEveryFloors == 0) base += baseAttack;
+    if(floorNumber % bossEveryFloors) base += baseAttack;
     int RandAttack = base + rand() % floorNumber + 1;
     return RandAttack;
 }
 
 int basic_mob_builder::DetermineHealth(int floorNumber){
-    int base = baseHealth;
-    if(floorNumber % bossEveryFloors == 0) base += baseHealth;
-    int RandHealth = base + rand() % floorNumber + 1;
-    return RandHealth;
+    //int base = baseHealth;
+    //if(floorNumber % bossEveryFloors) base += baseHealth;
+    //int RandHealth = base + rand() % floorNumber + 1;
+    //return RandHealth;
+    return 1;
 }
 
 weapon* basic_mob_builder::DetermineWeapon(int floorNumber){

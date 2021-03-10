@@ -14,7 +14,7 @@ Mob::~Mob()
 void Mob::attack(Basic_Unit* target)
 {
 	target->decrease_health(attackValue);
-	std::cout << name << " has dealt " << std::to_string(attackValue) << " damage to " << target->get_name() << ". " << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(target->getHealthCap()) << " health remaining." << std::endl; 
+	std::cout << name << " has dealt " << std::to_string(attackValue) << " damage to " << target->get_name() << ". " << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(healthCap) << " health remaining." << std::endl; 
 }
 
 void Mob::recover()
@@ -43,7 +43,7 @@ void Mob::special(Basic_Unit* target)
 {
 	target->decrease_health(attackValue+50);
 	std::cout << name << " casts Special on " << target->get_name() << ". " << name << " deals " << std::to_string(attackValue) << " damage to "
-    << target->get_name() << ". " << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(target->getHealthCap()) << " health remaining." <<
+    << target->get_name() << ". " << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(healthCap) << " health remaining." <<
     std::endl;
 }
 

@@ -42,6 +42,7 @@ class Floor {
         void clearMobs() {
             for (unsigned int i = 0; i < mobs.size(); i++) {
                 delete mobs.at(i);
+                mobs.erase(mobs.begin() + i);
             }
         }
         
@@ -51,10 +52,6 @@ class Floor {
 
         std::vector<Mob*> getMobs() {
             return mobs;
-        }
-        
-        void equipped() {
-            floor_loot = nullptr;
         }
 
 

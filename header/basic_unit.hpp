@@ -10,7 +10,6 @@ class Basic_Unit {
         std::string name;
         int health;
         int attackValue;
-        int healthCap;
         bool guarded;
         weapon* currentWeapon;
 
@@ -20,7 +19,6 @@ class Basic_Unit {
             health = _health;
             attackValue = _attack;
             currentWeapon = nullptr;
-
         }
         virtual ~Basic_Unit() = default;
         virtual void attack(Basic_Unit* target) = 0;
@@ -33,24 +31,18 @@ class Basic_Unit {
         void guard(std::string on_or_off) {
             if (on_or_off == "on") {
                 guarded = true;
-                std::cout << name << " is guarding for this turn." << std::endl;
+                std::cout << name << "is guarding for this turn." << std::endl;
             }
             else {
                 guarded = false;
                 std::cout << name << "'s guard has worn off." << std::endl;
             }
         }
-
         void set_weapon(weapon* newWeapon){
             delete currentWeapon;
 	        currentWeapon = newWeapon;
+            newWeapon = nullptr;
         }
-
-        bool is_guarded() {
-            return guarded;
-        }
-        
-        int getHealthCap() {return healthCap;}	
 };
 
 #endif

@@ -22,7 +22,6 @@ public:
     std::string GetDescription() {
 	return weaponDescription;
     }
-
 };
 
 #endif

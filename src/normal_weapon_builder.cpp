@@ -6,7 +6,7 @@
 
 int normal_weapon_builder::DetermineAttackValue(int floorNumber){
     int RandAttack = 10 + rand() % floorNumber + 1;
-    return (RandAttack);
+    return (RandAttack/2);
 }
 
 std::string normal_weapon_builder::DetermineDescription(int floorNumber){

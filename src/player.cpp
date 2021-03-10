@@ -8,6 +8,8 @@ Player::Player(std::string _name, int _health, int _attack) : Basic_Unit (_name,
 
 Player::~Player() {
 
+    
+
     delete currentWeapon;
 
 }
@@ -16,13 +18,12 @@ void Player::attack(Basic_Unit* target) {
     int attack;
     if (currentWeapon != nullptr) {
         attack = attackValue + currentWeapon->use();
-        target->decrease_health(attack);
     } else {
         attack = attackValue;
         target->decrease_health(attack);
     } 
     std::cout << name << " has dealt " << std::to_string(attack) << " damage to " << target->get_name() << ". " 
-    << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(target->getHealthCap()) << " health remaining." <<
+    << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(healthCap) << " health remaining." <<
     std::endl; //need to specify what monster for future reference.
 }
 
@@ -40,7 +41,7 @@ void Player::recover() {
 void Player::special(Basic_Unit* target) {
     target->decrease_health(attackValue + 50); //not sure how this damage will be calculated either
     std::cout << name << " casts Firebolt on " << target->get_name() << ". " << name << " deals " << std::to_string(attackValue + 50) << " damage to "
-    << target->get_name() << ". " << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(target->getHealthCap()) << " health remaining." <<
+    << target->get_name() << ". " << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(healthCap) << " health remaining." <<
     std::endl; //need to specify what monster for future reference.
 }
 
@@ -60,6 +61,11 @@ void Player::increment_health(int bonusHp) {
 
 void Player::increment_score() {
     floorCleared++;
+}
+
+void Player::loot() {
+    //implement floor class to implement this function
+    std::cout << "need to implement" << std::endl;
 }
 
 int Player::get_score() {
