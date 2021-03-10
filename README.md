@@ -50,12 +50,12 @@
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  > * Open terminal. Run these commands on terminal. 
- >     1. git clone https://github.com/cs100/final-project-jliem001-gceba003-jzhan326.git
- >     2. cd into cloned directory. 
- >     3. cmake .
- >     4. make
- >     5. ./abyss
- >     6. Enjoy the game!
+      1. git clone https://github.com/cs100/final-project-jliem001-gceba003-jzhan326.git
+      2. cd into cloned directory. 
+      3. cmake .
+      4. make
+      5. ./abyss
+      6. Enjoy the game!
  ## Testing
  > We tested our program with unit tests selected for each specific sets of class. We also used Valgrind to address the memory leaks and identify the segmentation faults. 
  
