@@ -26,10 +26,9 @@ class Director {
             builder->spawnMobs();
             return new_floor;
         }
-
+        
         void destroyFloor() {
-            builder->resetFloor();
-            //implement a case to determine when to destroy loot;
+            builder->resetFloor(); //clearMobs and clearLoot
             delete new_floor;
         }
 

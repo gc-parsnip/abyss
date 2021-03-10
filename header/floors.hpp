@@ -12,6 +12,7 @@ class Floor {
         std::string floor_type;
         std::vector<Mob*> mobs;
         std::string floor_description;
+        Loot* floor_loot;
 
     public:
         Floor(std::string type) {
@@ -26,15 +27,27 @@ class Floor {
             floor_description = description;
         }
 
+        void setLoot(Loot* _loot) {
+            floor_loot = _loot;
+        }
+
         std::string displayFloorDescription() {
             return floor_description;
         }
         
+        Loot* getLoot() {
+            return floor_loot;
+        }
+
         void clearMobs() {
             for (unsigned int i = 0; i < mobs.size(); i++) {
                 delete mobs.at(i);
                 mobs.erase(mobs.begin() + i);
             }
+        }
+        
+        void clearLoot() {
+            delete floor_loot;
         }
 
 

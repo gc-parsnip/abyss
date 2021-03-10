@@ -1,12 +1,15 @@
 #ifndef __FLOOR_BUILDER_HPP__
 #define __FLOOR_BUILDER_HPP__
 
-#include "loot.hpp"
+#include "attack_pot.hpp"
+#include "combo_pot.hpp"
+#include "health_pot.hpp"
 #include "Mob.hpp"
 #include "floors.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
+#include <cstdlib>
 
 class Floor_Builder {
     protected: 

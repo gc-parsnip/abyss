@@ -5,6 +5,7 @@
 #include <fstream>
 
 
+
 //#include "mob_builder.hpp"
 
 class Normal_Floor_Builder : public Floor_Builder {
@@ -12,15 +13,14 @@ class Normal_Floor_Builder : public Floor_Builder {
     public:
         Normal_Floor_Builder() {
             std::ifstream in;
-            in.open("../GameText/FloorDescriptions.txt");
-            std::string line
+            in.open("./GameText/FloorDescriptions.txt");
+            std::string line;
             if (in.is_open()) {;
                 while (std::getline(in, line, '~')) {
                     scenery.push_back(line);
                 }
             } else {
                 std::cout << "Failed to open FloorDescriptions.txt" << std::endl;
-                scenery = {"hello"}
             }
             in.close();
         }
@@ -34,6 +34,7 @@ class Normal_Floor_Builder : public Floor_Builder {
 
         void resetFloor() {
             _floor->clearMobs();
+            _floor->clearLoot();
         }
 
         void spawnMobs() {
@@ -41,7 +42,14 @@ class Normal_Floor_Builder : public Floor_Builder {
         }
 
         void spawnLoot() {
-            
+            int randVal = std::rand()%1;
+            if (randVal == 0) {
+                 _floor->setLoot(new attack_pot(5, "A glass bottle with a strange pink liquid"));
+            } else if (randVal == 1) {
+                _floor->setLoot(new health_pot(10, "A glass bottle with a strange red liquid."));
+            } else {
+                std::cout << "Wrong Loot Case" << std::endl;
+            }
         }
 
         void setScenery(int index) {
