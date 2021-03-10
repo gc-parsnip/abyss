@@ -51,5 +51,5 @@
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ > We tested our program with unit tests selected for each specific sets of class. We also used Valgrind to address the memory leaks and identify the segmentation faults. 
  
