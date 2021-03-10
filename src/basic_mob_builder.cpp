@@ -24,12 +24,16 @@ std::vector<std::string> basic_mob_builder::DetermineName(int floorNumber){
 }
 
 int basic_mob_builder::DetermineAttack(int floorNumber){
-    int RandAttack = 10 + rand() % floorNumber + 1;
+    int base = baseAttack;
+    if(floorNumber % bossEveryFloors) base += baseAttack;
+    int RandAttack = 10 + rand() % base + 1;
     return RandAttack;
 }
 
 int basic_mob_builder::DetermineHealth(int floorNumber){
-    //int RandHealth = 50 + rand() % (floorNumber + 5) + 1;
+    //int base = baseHealth;
+    //if(floorNumber % bossEveryFloors) base += baseHealth;
+    //int RandHealth = 10 + rand() % base + 1;
     //return RandHealth;
     return 1;
 }

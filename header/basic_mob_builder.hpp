@@ -11,6 +11,9 @@
 class basic_mob_builder : public mob_builder
 {
 private:
+    int baseHealth = 50;
+    int baseAttack = 10;
+    int bossEveryFloors = 5;
     Mob* generatedMob = nullptr;
     normal_weapon_builder* weaponBuilder = nullptr;
     std::unordered_map<int, std::string> mobNames = {
