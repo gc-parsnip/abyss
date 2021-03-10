@@ -31,7 +31,7 @@ private:
 	{17, "A handful of magic sand."},
 	{18, "A lance. Difficult to hold without a horse."},
 	{19, "A set of two daggers that fit together to make a larger sword."},
-	{20, "A sword so unbelievably massive that is a miracle you can even weild it"},
+	{20, "A sword so unbelievably massive that is a miracle you can even wield it"},
     };
 protected:
     virtual int DetermineAttackValue(int floorNumber);
