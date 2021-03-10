@@ -39,7 +39,9 @@ class Basic_Unit {
             }
         }
         void set_weapon(weapon* newWeapon){
+            delete currentWeapon;
 	        currentWeapon = newWeapon;
+            newWeapon = nullptr;
         }
 };
 

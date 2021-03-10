@@ -10,7 +10,6 @@
 class Director { 
     private:
         Floor_Builder* builder;
-        Player* player; 
         Floor* new_floor;
 
     public:
@@ -20,8 +19,9 @@ class Director {
         void changeBuilder(Floor_Builder* _builder) {
             builder = _builder;
         }
-        Floor* generateFloor(int index) {
+        Floor* generateFloor(int index, Player* player) {
             new_floor = builder->createFloor(index);
+            builder->setPlayer(player);
             builder->spawnLoot();
             builder->spawnMobs();
             return new_floor;
