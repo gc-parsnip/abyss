@@ -8,6 +8,14 @@
 #include "../header/floors.hpp"
 #include <iostream>
 
+TEST(floor_test, CheckFloorExists) {
+    Normal_Floor_Builder nf;
+    Director test(&nf);
+    Floor* floor = test.generateFloor(0);
+    EXPECT_EQ(floor != nullptr, true);
+    EXPECT_EQ(floor->displayFloorDescription(), "Forest\r\nA vast forest expands out and reaches as far as the eye can see. \r\nThere is a small dirt trail that leads deep into the forest.\r\nIt seems like this is the only path forward.\r\n");
+}
+
 TEST(floor_test, BuildNormalForestFloor) {
     Normal_Floor_Builder nf;
     Director test(&nf);

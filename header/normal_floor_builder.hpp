@@ -38,7 +38,7 @@ class Normal_Floor_Builder : public Floor_Builder {
         }
 
         void spawnMobs() {
-            //wait til compile before adding it
+            //wait til adding mobFile before implementing function
         }
 
         void spawnLoot() {
@@ -48,7 +48,7 @@ class Normal_Floor_Builder : public Floor_Builder {
             } else if (randVal == 1) {
                 _floor->setLoot(new health_pot(10, "A glass bottle with a strange red liquid."));
             } else {
-                std::cout << "Wrong Loot Case" << std::endl;
+                std::cout << "Weapon Case" << std::endl;
             }
         }
 
