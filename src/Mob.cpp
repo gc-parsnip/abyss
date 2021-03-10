@@ -16,7 +16,11 @@ void Mob::attack(Basic_Unit* target)
 	int attackVal;
 	if (target->is_guarded()) {
 		attackVal = attackValue - (rand()%51 + 50);
-		target->decrease_health(attackVal);
+		if (attackVal <= 0) {
+			target->decrease_health(0);
+		} else {
+			target->decrease_health(attackVal);
+		}
 	} else  {
 		attackVal = attackValue;
 		target->decrease_health(attackVal);
