@@ -2,7 +2,7 @@
 
 Mob::Mob(std::string _name, int _health, int _attack, std::string mobDescription) : Basic_Unit(_name, _health, _attack)
 {
-	mobDescription = "";	
+	this->mobDescription = mobDescription;	
 	healthCap = _health;
 }
 

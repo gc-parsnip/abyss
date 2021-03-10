@@ -7,16 +7,22 @@ Player::Player(std::string _name, int _health, int _attack) : Basic_Unit (_name,
 }
 
 Player::~Player() {
+
     
+
+    delete currentWeapon;
+
 }
 
 void Player::attack(Basic_Unit* target) {
-    // if (weapon != nullptr) {
-        //implement some weapon modifier damage
-    // } else {
-    target->decrease_health(attackValue);
-    // } not sure how the damage will be calculated yet
-    std::cout << name << " has dealt " << std::to_string(attackValue) << " damage to " << target->get_name() << ". " 
+    int attack;
+    if (currentWeapon != nullptr) {
+        attack = attackValue + currentWeapon->use();
+    } else {
+        attack = attackValue;
+        target->decrease_health(attack);
+    } 
+    std::cout << name << " has dealt " << std::to_string(attack) << " damage to " << target->get_name() << ". " 
     << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(healthCap) << " health remaining." <<
     std::endl; //need to specify what monster for future reference.
 }
@@ -34,7 +40,7 @@ void Player::recover() {
 
 void Player::special(Basic_Unit* target) {
     target->decrease_health(attackValue + 50); //not sure how this damage will be calculated either
-    std::cout << name << " casts Firebolt on " << target->get_name() << ". " << name << " deals " << std::to_string(attackValue) << " damage to "
+    std::cout << name << " casts Firebolt on " << target->get_name() << ". " << name << " deals " << std::to_string(attackValue + 50) << " damage to "
     << target->get_name() << ". " << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(healthCap) << " health remaining." <<
     std::endl; //need to specify what monster for future reference.
 }
@@ -56,10 +62,6 @@ void Player::increment_health(int bonusHp) {
 void Player::increment_score() {
     floorCleared++;
 }
-
-// void Player::equip_weapon(Weapon* _weapon) {
-//     weapon = _weapon;
-// }
 
 void Player::loot() {
     //implement floor class to implement this function
