@@ -10,7 +10,7 @@ class Player : public Basic_Unit {
     private:
         int floorCleared;
         int healthCap;
-
+    
     public:     
         Player(std::string _name, int _health, int _attack);
         ~Player();
