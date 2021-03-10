@@ -14,7 +14,7 @@ ADD_EXECUTABLE(test
     src/normal_weapon_builder.cpp
 )
 
-ADD_EXECUTABLE(main
+ADD_EXECUTABLE(abyss
 	src/Main.cpp
     src/Mob.cpp
     src/player.cpp
