@@ -49,7 +49,7 @@
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > * Open terminal.
+ > * Open terminal. Run these commands on terminal. 
  >     1. git clone https://github.com/cs100/final-project-jliem001-gceba003-jzhan326.git
  >     2. cmake .
  >     3. make
