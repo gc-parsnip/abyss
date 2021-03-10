@@ -29,7 +29,7 @@
  >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
 ## Class Diagram
  > The builder pattern is laid out in the top right of the diagram, showing both how floors and monsters can be built and that building monsters is a requirment of building floors. The bottom of the diagram has the class StatPot, which implements the Composite pattern, allowing for pots that will be used to generate interesting stat changes for the user by combining AttPots and HealthPots through the use of ComboPot and NegatePot Classes. The left side of the diagramm contains the common interfaces for both floors and BasicUnits which make up the main pieces of the game (placed by builders).
- > ![OMT.png](https://github.com/cs100/final-project-jliem001-gceba003-jzhan326/blob/master/Images/FinalProjectUpdatedOMT.png)
+ > ![OMT.png](https://github.com/cs100/final-project-jliem001-gceba003-jzhan326/blob/master/Images/FinalProjectUpdatedOMT.png?raw=true)
 
  > ## Phase III
  > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
