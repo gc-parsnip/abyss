@@ -68,6 +68,7 @@ protected:
     virtual weapon* DetermineWeapon(int);
 public:
     basic_mob_builder();
+    ~basic_mob_builder();
     virtual Mob* GetMob(int);
 };
 
