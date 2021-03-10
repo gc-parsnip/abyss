@@ -48,7 +48,8 @@
  
  ## Screenshots
  >  ![1.png](https://github.com/cs100/final-project-jliem001-gceba003-jzhan326/blob/master/Images/1.png?raw=true)
- >  ![2.png]
+ >  ![2.png](https://github.com/cs100/final-project-jliem001-gceba003-jzhan326/blob/master/Images/2.png?raw=true)
+ >  ![3.png](https://github.com/cs100/final-project-jliem001-gceba003-jzhan326/blob/master/Images/2.png?raw=true)
  ## Installation/Usage
  > * Open terminal. Run these commands on terminal. 
  >     1. git clone https://github.com/cs100/final-project-jliem001-gceba003-jzhan326.git
