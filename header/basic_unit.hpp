@@ -39,7 +39,7 @@ class Basic_Unit {
             }
         }
         void set_weapon(weapon* newWeapon){
-	    currentWeapon = newWeapon;
+	        currentWeapon = newWeapon;
         }
 };
 
