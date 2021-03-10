@@ -13,15 +13,22 @@ Mob::~Mob()
 
 void Mob::attack(Basic_Unit* target)
 {
-	target->decrease_health(attackValue);
-	std::cout << name << " has dealt " << std::to_string(attackValue) << " damage to " << target->get_name() << ". " << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(target->getHealthCap()) << " health remaining." << std::endl; 
+	int attackVal;
+	if (target->is_guarded()) {
+		attackVal = attackValue - (rand()%51 + 50);
+		target->decrease_health(attackVal);
+	} else  {
+		attackVal = attackValue;
+		target->decrease_health(attackVal);
+	}
+	std::cout << name << " has dealt " << std::to_string(attackVal) << " damage to " << target->get_name() << ". " << target->get_name() << " has " << std::to_string(target->get_health()) << "/" << std::to_string(target->getHealthCap()) << " health remaining." << std::endl; 
 }
 
 void Mob::recover()
 {
 	if(health < healthCap)
 	{
-		if(healthCap - health > 10)
+		if(healthCap - health >= 10)
 		{
 		health += 10;
 		std::cout << name << " has recovered 10 health. " << std::to_string(health) << "/" << std::to_string(healthCap) << std::endl;

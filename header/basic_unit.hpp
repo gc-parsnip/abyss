@@ -20,6 +20,7 @@ class Basic_Unit {
             health = _health;
             attackValue = _attack;
             currentWeapon = nullptr;
+            guarded = false;
 
         }
         virtual ~Basic_Unit() = default;

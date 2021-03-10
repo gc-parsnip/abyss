@@ -24,10 +24,10 @@ TEST(player_test, test_attack) {
 
 TEST(player_test, test_recover) {
     Player test = Player("Test", 100, 10);
-    Player test1 = Player("Test1", 30, 10);
+    Player test1 = Player("Test1", 100, 10);
     test.attack(&test1);
     test1.recover();
-    EXPECT_EQ(test1.get_health(), 30);
+    EXPECT_EQ(test1.get_health(), 100);
 }
 
 TEST(player_test, test_recover_when_full_hp) {
