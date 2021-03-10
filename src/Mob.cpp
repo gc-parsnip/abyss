@@ -18,6 +18,7 @@ void Mob::attack(Basic_Unit* target)
 		attackVal = attackValue - (rand()%51 + 50);
 		if (attackVal <= 0) {
 			target->decrease_health(0);
+			attackVal = 0;	
 		} else {
 			target->decrease_health(attackVal);
 		}
