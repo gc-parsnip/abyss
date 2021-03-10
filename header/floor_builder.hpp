@@ -17,6 +17,7 @@ class Floor_Builder {
         std::vector<std::string> scenery;
         Loot* _loot;
         std::string currentScene;
+        Player* player;
 
     public:
         virtual void resetFloor() = 0;
@@ -24,6 +25,7 @@ class Floor_Builder {
         virtual void spawnLoot() = 0;
         virtual Floor* createFloor(int index) = 0;
         virtual void setScenery(int index) = 0;
+        virtual void setPlayer(Player* _player) = 0;
 };
 
 #endif

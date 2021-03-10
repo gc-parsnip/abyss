@@ -50,6 +50,10 @@ class Floor {
             delete floor_loot;
         }
 
+        std::vector<Mob*> getMobs() {
+            return mobs;
+        }
+
 
 };
 

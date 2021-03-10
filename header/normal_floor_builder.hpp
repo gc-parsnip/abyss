@@ -3,6 +3,8 @@
 
 #include "floor_builder.hpp"
 #include <fstream>
+#include "basic_mob_builder.hpp"
+#include "normal_weapon_builder.hpp"
 
 
 
@@ -38,22 +40,29 @@ class Normal_Floor_Builder : public Floor_Builder {
         }
 
         void spawnMobs() {
-            //wait til adding mobFile before implementing function
+            basic_mob_builder build;
+            Mob* temp = build.GetMob(player->get_score()+1); 
+            _floor->addMob(temp);
         }
 
         void spawnLoot() {
-            int randVal = std::rand()%1;
+            int randVal = std::rand()%3;
             if (randVal == 0) {
                  _floor->setLoot(new attack_pot(5, "A glass bottle with a strange pink liquid"));
             } else if (randVal == 1) {
                 _floor->setLoot(new health_pot(10, "A glass bottle with a strange red liquid."));
-            } else {
-                std::cout << "Weapon Case" << std::endl;
+            } else if (randVal == 2) {
+                normal_weapon_builder build;
+                _floor->setLoot(build.GetWeapon(player->get_score() + 1));
             }
         }
 
         void setScenery(int index) {
             _floor->setDescription(scenery.at(index));
+        }
+
+        void setPlayer(Player* _player) {
+            player = _player;
         }
         
 };
