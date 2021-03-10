@@ -49,7 +49,11 @@
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ > 1. git clone the repo.
+ > 2. cmake .
+ > 3. make
+ > 4. ./abyss
+ > 5. Enjoy the game!
  ## Testing
  > We tested our program with unit tests selected for each specific sets of class. We also used Valgrind to address the memory leaks and identify the segmentation faults. 
  
