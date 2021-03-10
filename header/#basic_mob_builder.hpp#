@@ -15,7 +15,7 @@ private:
     int baseAttack = 10;
     int bossEveryFloors = 5;
     Mob* generatedMob = nullptr;
-    normal_weapon_builder* weaponBuilder = nullptr;
+    normal_weapon_builder weaponBuilder;
     std::unordered_map<int, std::string> mobNames = {
 	{1, "Slime"},
 	{2, "Spider"},
@@ -68,7 +68,6 @@ protected:
     virtual weapon* DetermineWeapon(int);
 public:
     basic_mob_builder();
-    ~basic_mob_builder();
     virtual Mob* GetMob(int);
 };
 

@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "../header/weapon.hpp"
 
+
 int normal_weapon_builder::DetermineAttackValue(int floorNumber){
     int RandAttack = 10 + rand() % floorNumber + 1;
     return (RandAttack);

@@ -8,7 +8,7 @@ Mob::Mob(std::string _name, int _health, int _attack, std::string mobDescription
 
 Mob::~Mob()
 {
-
+    delete currentWeapon;
 }
 
 void Mob::attack(Basic_Unit* target)

@@ -1,0 +1,16 @@
+#ifndef __BASICUNIT_HPP__
+#define __BASICUNIT_HPP__
+
+class BasicUnit
+{
+protected:
+    int health;
+    int attack;
+public:
+    BasicUnit(int health, int attack){
+	this->health = health;
+	this->attack = attack;
+    }
+};
+
+#endif

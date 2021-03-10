@@ -10,7 +10,11 @@
 #include <stdlib.h>
 
 basic_mob_builder::basic_mob_builder(){
-    weaponBuilder = new normal_weapon_builder();
+    weaponBuilder = new normal_weapon_builder;
+}
+
+basic_mob_builder::~basic_mob_builder(){
+    delete weaponBuilder;
 }
 
 std::vector<std::string> basic_mob_builder::DetermineName(int floorNumber){

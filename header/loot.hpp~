@@ -1,0 +1,12 @@
+#ifndef __LOOT_HPP__
+#define __LOOT_HPP__
+
+#include "BasicUnit.hpp"
+
+class Loot
+{
+public:
+    virtual int use() = 0;
+};
+
+#endif

@@ -36,7 +36,7 @@ private:
 protected:
     virtual int DetermineAttackValue(int floorNumber);
     virtual std::string DetermineDescription(int floorNumber);
-public:    
+public:
     virtual weapon* GetWeapon(int floorNumber);
 };
 
